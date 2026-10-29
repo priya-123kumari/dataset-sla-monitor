@@ -1,0 +1,10 @@
+source_row_number,expected_reject_reason
+15,timestamp_in_future
+18,invalid_date
+22,invalid_timestamp
+36,missing_required_field
+37,unknown_dataset
+38,malformed_row
+44,completed_before_arrived
+45,invalid_row_count
+51,duplicate_event_in_file

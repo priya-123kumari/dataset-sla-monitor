@@ -1,0 +1,37 @@
+LATEST RUN
+  run_id=run_20261029T142631_ea748e77 file=events.csv as_of=2026-10-08T23:00:00Z status=success
+  rows_in=51 loaded=42 already_loaded=0 rejected=9 alerts_opened=6
+
+SLA COMPLIANCE BY DATASET (expected dates evaluated)
+  dataset name                 days  on_time  late  breach  missing  on_time_%
+  ds_001  daily_orders            8        5     0       2        1      62.5%
+  ds_002  daily_customers         8        5     1       2        0      62.5%
+  ds_003  daily_payments          8        6     0       2        0      75.0%
+  ds_004  daily_inventory         8        7     1       0        0      87.5%
+  ds_005  daily_shipments         8        5     2       1        0      62.5%
+
+DATASET FRESHNESS
+  ds_001  last_completed=2026-10-08T02:04:00Z  age=1256min (limit 1560)  fresh
+  ds_002  last_completed=2026-10-08T04:55:00Z  age=1085min (limit 1560)  fresh
+  ds_003  last_completed=2026-10-08T06:09:00Z  age=1011min (limit 1560)  fresh
+  ds_004  last_completed=2026-10-08T08:38:00Z  age=862min (limit 1560)  fresh
+  ds_005  last_completed=2026-10-07T07:09:00Z  age=2391min (limit 1560)  stale
+
+OPEN ALERTS
+  [HIGH] ds_001 (daily_orders) for 2026-10-06: SLA breached by 22h46m (deadline 2026-10-06T04:00:00Z, completed 2026-10-07T02:46:00Z). Owner: team_a@example.com. Action: check the load job for slowness or failure; notify downstream consumers.
+  [HIGH] ds_003 (daily_payments) for 2026-10-06: SLA breached by 20m (deadline 2026-10-06T08:00:00Z, completed 2026-10-06T08:20:00Z). Owner: team_c@example.com. Action: check the load job for slowness or failure; notify downstream consumers.
+  [HIGH] ds_005 (daily_shipments): data is stale, last completed load 2026-10-07T07:09:00Z, 39h51m old (limit 26h00m). Owner: team_a@example.com. Action: confirm the producer is running; consumers are reading old data.
+  [HIGH] ds_005 (daily_shipments) for 2026-10-08: SLA breached by 19h00m (deadline 2026-10-08T04:00:00Z, not completed). Owner: team_a@example.com. Action: check the load job for slowness or failure; notify downstream consumers.
+  [MEDIUM] ds_004 (daily_inventory) for 2026-10-07: arrived 16m after expected time (first arrival 2026-10-07T08:16:00Z, grace deadline 2026-10-07T08:15:00Z). Owner: team_d@example.com. Action: review producer schedule if this repeats.
+  [MEDIUM] ds_005 (daily_shipments) for 2026-10-07: arrived 56m after expected time (first arrival 2026-10-07T02:56:00Z, grace deadline 2026-10-07T02:15:00Z). Owner: team_a@example.com. Action: review producer schedule if this repeats.
+
+REJECTS BY REASON
+  completed_before_arrived        1
+  duplicate_event_in_file         1
+  invalid_date                    1
+  invalid_row_count               1
+  invalid_timestamp               1
+  malformed_row                   1
+  missing_required_field          1
+  timestamp_in_future             1
+  unknown_dataset                 1

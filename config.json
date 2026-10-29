@@ -1,0 +1,4 @@
+{
+  "db_path": "output/sla_monitor.db",
+  "alert_lookback_days": 3
+}

@@ -1,0 +1,2 @@
+run_id,source_file,as_of,started_at,finished_at,status,rows_in,rows_loaded,rows_already_loaded,rows_rejected,status_rows_changed,alerts_opened,alerts_resolved,failure_reason,warnings,duration_seconds
+run_20261029T142631_ea748e77,events.csv,2026-10-08T23:00:00Z,2026-10-29T14:26:31Z,2026-10-29T14:26:31Z,success,51,42,0,9,40,6,0,,,0.0592

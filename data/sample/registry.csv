@@ -1,0 +1,6 @@
+dataset_id,dataset_name,expected_arrival_time,sla_completion_time,grace_minutes,max_staleness_minutes,owner,active_from,is_active
+ds_001,daily_orders,02:00,04:00,15,1560,team_a@example.com,2026-10-01,1
+ds_002,daily_customers,04:30,06:30,15,1560,team_b@example.com,2026-10-01,1
+ds_003,daily_payments,06:00,08:00,30,1560,team_c@example.com,2026-10-01,1
+ds_004,daily_inventory,08:00,10:00,15,1560,team_d@example.com,2026-10-01,1
+ds_005,daily_shipments,02:00,04:00,15,1560,team_a@example.com,2026-10-01,1

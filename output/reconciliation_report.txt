@@ -1,0 +1,28 @@
+RECONCILIATION REPORT
+=====================
+[PASS] run_counts_balance (rows_in = loaded + already_loaded + rejected, per run)
+       1 successful runs, 0 unbalanced
+[PASS] events_table_equals_sum_of_loaded
+       arrival_events=42, sum(rows_loaded)=42
+[PASS] referential_integrity (foreign_key_check)
+       0 violations
+[PASS] rejects_traceable (file, line, reason, raw record present)
+       9 rejects, 0 untraceable
+[PASS] every_event_date_has_a_status_row
+       0 without status
+[PASS] status_event_count_matches_events
+       0 mismatches
+[PASS] open_alerts_match_current_status
+       0 open alerts without matching status
+[PASS] freshness_matches_latest_completed_load
+       0 mismatches
+[PASS] status_matches_answer_key
+       40 expected, 40 produced, 0 differences
+[PASS] rejects_match_answer_key (line number and reason)
+       9 expected, 9 produced, 0 differences
+[PASS] rows_loaded_matches_answer_key
+       loaded=42, expected=42
+[PASS] sum_row_count_matches_answer_key (key aggregate)
+       sum=919581, expected=919581
+
+12/12 checks passed

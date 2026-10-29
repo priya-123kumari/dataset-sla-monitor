@@ -1,0 +1,2 @@
+# Runtime: Python standard library only (csv, sqlite3, argparse, logging, ...). Nothing to install.
+# Tests use stdlib unittest. pytest is optional and also works: `pip install pytest && pytest`

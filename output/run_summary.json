@@ -1,0 +1,25 @@
+{
+  "run_id": "sample_run_001",
+  "status": "success",
+  "source_file": "events.csv",
+  "as_of": "2026-10-08T23:00:00Z",
+  "rows_in": 51,
+  "rows_loaded": 42,
+  "rows_already_loaded": 0,
+  "rows_rejected": 9,
+  "status_rows_changed": 40,
+  "alerts_opened": 6,
+  "alerts_resolved": 0,
+  "failure_reason": null,
+  "warnings": [],
+  "stage_seconds": {
+    "registry": 0.0007,
+    "read": 0.0002,
+    "validate": 0.0007,
+    "load": 0.0003,
+    "transform": 0.0013,
+    "publish": 0.0006,
+    "alerts": 0.0003
+  },
+  "duration_seconds": 0.0149
+}

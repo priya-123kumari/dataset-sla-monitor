@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "datasets": 5,
+  "days": 8,
+  "start_date": "2026-10-01",
+  "as_of": "2026-10-08T23:00:00Z",
+  "rows_in": 51,
+  "rows_loaded": 42,
+  "rows_rejected": 9,
+  "sum_row_count_loaded": 919581,
+  "status_counts": {
+    "late": 4,
+    "missing": 1,
+    "on_time": 28,
+    "sla_breached": 7
+  },
+  "reject_counts": {
+    "completed_before_arrived": 1,
+    "duplicate_event_in_file": 1,
+    "invalid_date": 1,
+    "invalid_row_count": 1,
+    "invalid_timestamp": 1,
+    "malformed_row": 1,
+    "missing_required_field": 1,
+    "timestamp_in_future": 1,
+    "unknown_dataset": 1
+  }
+}

@@ -1,0 +1,21 @@
+OPTIMISATION 1 (found by profiling): format 300,000 timestamps, identical output
+  strftime : 0.818s
+  isoformat: 0.537s   -> 1.5x faster
+
+generated 102,961 rows (50 datasets x 1961 days) in 3.08s, seed=42
+
+FULL PIPELINE (status=success; loaded=98,342 rejected=4,619)
+  stage         first run (s)   rerun (s)
+  registry              0.002       0.001
+  read                  0.267       0.272
+  validate              1.674       1.853
+  load                  0.967       0.549
+  transform             3.396       3.053
+  publish               1.748       0.685
+  alerts                0.382       0.362
+  TOTAL                 8.446       6.779
+  throughput (first run): 12,190 rows/s; rerun wrote 0 status rows (unchanged rows are skipped)
+
+OPTIMISATION 2: event load of 98,342 rows (identical result: 98,342 rows inserted)
+  naive      (SELECT + INSERT per row) : 1.057s
+  optimised  (executemany INSERT OR IGNORE): 0.828s   -> 1.3x faster
